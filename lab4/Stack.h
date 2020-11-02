@@ -2,11 +2,12 @@
 #include "List.h"
 template<typename T>
 class Stack :
-    public List<T>
+    protected List<T>
 {
 private:
+    //overridden methods
     void addElement(const T)override;
-    T removeElement()override;
+    T removeElement(const int)override;
 public:
     Stack(const int size=0);
     Stack(const Stack<T>&);

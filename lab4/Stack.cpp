@@ -19,18 +19,24 @@ void Stack<T>::addElement(const T obj)
 }
 
 template<typename T>
-T Stack<T>::removeElement()
+T Stack<T>::removeElement(const int index)
 {
-    // TODO: raise exception here where currentSize<=0 ?
-    List<T>::currentSize--;
-    return List<T>::arr[List<T>::currentSize];
+    T temp={};
+    if (index < List<T>::currentSize) {
+        temp = List<T>::arr[index];
+        for (int i = index; i < List<T>::currentSize; i++) {
+            List<T>::arr[i] = List<T>::arr[i + 1];
+        }
+        List<T>::currentSize--;
+    }
+    return temp;
 }
 
 
 template<typename T>
 bool Stack<T>::full() const
 {
-    if (List<T>::currentSize() == List<T>::maxSize()) {
+    if (List<T>::currentSize== List<T>::maxSize) {
         return true;
     }
     return false;
@@ -54,7 +60,7 @@ void Stack<T>::push(const T obj)
 template<typename T>
 T Stack<T>::pop()
 {
-    return removeElement();
+    return removeElement(List<T>::currentSize-1);
 }
 
 template<typename T>

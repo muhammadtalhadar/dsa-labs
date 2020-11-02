@@ -16,5 +16,5 @@ public:
 	~List();
 
 	virtual void addElement(const T)=0;
-	virtual T removeElement() = 0;
+	virtual T removeElement(const int) = 0;
 };

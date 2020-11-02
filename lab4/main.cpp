@@ -3,6 +3,9 @@
 #include"ListLinker.h"
 #include"Stack.h"
 #include"StackLinker.h"
+#include"Queue.h"
+#include"QueueLinker.h"
+
 using namespace std;
 
 // display stack
@@ -17,6 +20,7 @@ void showStack(const Stack<T>& stk) {
 	cout <<" <- HEAD "<< endl;
 }
 
+// reverse stack
 template<typename T>
 void reverseStack(Stack<T>& stk) {
 	T temp;
@@ -30,30 +34,38 @@ void reverseStack(Stack<T>& stk) {
 	}
 }
 
+
+// display queue
+template<typename T>
+void showQueue(const Queue<T>& que){
+
+	int size = que.getCurrentSize();
+	cout << "\nCurrent size: " << size;
+
+	cout << endl << "HEAD -> ";
+	for (int i = 0; i < size; i++) {
+		cout << que[i]<<endl;
+	}
+}
+
 int main()
 {
-	Stack<int> stk(3);
-	cout << "\nempty(): " << stk.empty(); // should answer YES
+	Queue<int> que(3);
+	int num;
 
-	// this will test stack::push(), stack::addElement() and list::arrayGrow
-	int a = 0;
-	for (int i = 0; i < 7; i++) {
-		cout << "Enter element to insert into stack: ";
-		cin >> a;
-		stk.push(a);
+	for (int i = 0; i < 5; i++) {
+		cout << endl<<i+1<<"- Enter number to queue: ";
+		cin >> num;
+		que.enqueue(num);
 	}
 
-	// print
-	showStack(stk);
+	showQueue(que);
 
-	// remove pop element then print
-	cout << "\nElement popped: " << stk.pop();
-	showStack(stk);
+	cout<<"\n dequeued: "<<que.dequeue();
+	cout << "\n dequeued: " << que.dequeue();
 
-	// reversal the print
-	reverseStack(stk);
-	cout << "\nStack Reversed...";
-	showStack(stk);
+	showQueue(que);
 
+	cout << "\nfinished.";
 	return 0;
 }
