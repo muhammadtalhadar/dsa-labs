@@ -15,6 +15,6 @@ public:
 	List(const List<T>&);
 	~List();
 
-	virtual void addElement(const T)=0;
-	virtual T removeElement(const int) = 0;
+	virtual void addElement(T)=0;
+	virtual T removeElement() = 0;
 };
