@@ -80,3 +80,9 @@ template <typename T> void CircularQueue<T>::display() const {
   }
   cout << endl;
 }
+
+// returns the reverse of argument queue
+template<typename T> 
+CircularQueue<T> reverse(const CircularQueue<T>& q){
+  
+}
