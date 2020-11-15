@@ -83,6 +83,25 @@ template <typename T> void CircularQueue<T>::display() const {
 
 // returns the reverse of argument queue
 template<typename T> 
-CircularQueue<T> reverse(const CircularQueue<T>& q){
+CircularQueue<T> reverse(CircularQueue<T>& q){
+  int size=q.size();
+  CircularQueue<T> ans(size);
   
+  for (int i = 0; i < size; i++) { 
+  
+        // Get the last element to the 
+        // front of queue 
+        for (int j = 0; j < q.size() - 1; j++) { 
+            int x = q.front();
+	    cout<<"front: "<<endl;
+	    q.enqueue(x);
+            q.dequeue(); 
+        } 
+  
+        // Get the last element and 
+        // add it to the new queue 
+        ans.enqueue(q.front()); 
+        q.dequeue(); 
+    } 
+    return ans;
 }

@@ -17,21 +17,10 @@ int main() {
   }
   que.display();
 
-  cout<<"is full: "<<que.full()<<endl;
-  cout<<"is empty: "<<que.empty()<<endl;
-  
-  cout<<"front val: "<<que.front()<<endl;
-  cout<<"rear val: "<<que.rear()<<endl;
-  
-  cout << "\n dequeued: " <<que.dequeue()<<endl;
-  
-  cout<<"is full: "<<que.full()<<endl;
-  cout<<"is empty: "<<que.empty()<<endl;
+  CircularQueue<int> temp(reverse<int>(que));
+  temp.display();
 
-  cout << "\n dequeued: " <<que.dequeue()<<endl;
-  cout<<"is full: "<<que.full()<<endl;
-  cout<<"is empty: "<<que.empty()<<endl;
-
+  que.display();
   cout << "\nfinished.";
   return 0;
 }
