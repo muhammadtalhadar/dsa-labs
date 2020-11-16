@@ -1,24 +1,25 @@
 #pragma once
 #include "Node.h"
+#include "Node.cpp"
 #include <iostream>
 using namespace std;
 
-class LinkedList
-{
+class LinkedList {
 protected:
-	Node *head;
-	Node *tail;
+  Node *head;
+  Node *tail;
+
 public:
+  // constructor
+  LinkedList();
+  // destructor
+  ~LinkedList();
 
-	// constructor
-	LinkedList();
-	//destructor
-	~LinkedList();
+  void destroyLL();
 
-	// pure virtual methods
-	virtual void insertAtTail(int) = 0;
-	virtual void insertAtHead(int) = 0;
-	virtual bool removeFromHead() = 0;
-	virtual bool removeFromTail() = 0;
+  // pure virtual methods
+  virtual void insertAtTail(int) = 0;
+  virtual void insertAtHead(int) = 0;
+  virtual bool removeFromHead() = 0;
+  virtual bool removeFromTail() = 0;
 };
-

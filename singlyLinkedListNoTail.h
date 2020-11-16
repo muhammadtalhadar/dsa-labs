@@ -4,7 +4,7 @@ class singlyLinkedListNoTail : public LinkedList {
 public:
   int ssize;
   singlyLinkedListNoTail();
-
+  ~singlyLinkedListNoTail();
   // deletion codes
   bool removeFromTail();
   bool removeFromHead();

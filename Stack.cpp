@@ -3,7 +3,7 @@
 
 Stack::Stack():singlyLinkedList(){}
 
-Stack::~Stack() {}
+Stack::~Stack() {destroyLL();}
 
 void Stack::push(int val) {
 	insertAtTail(val);

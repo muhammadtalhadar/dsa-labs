@@ -2,7 +2,7 @@
 #include "singlyLinkedListNoTail.h"
 
 singlyLinkedListNoTail::singlyLinkedListNoTail() : LinkedList() { int ssize = 0; }
-
+singlyLinkedListNoTail::~singlyLinkedListNoTail(){head=nullptr;}
 // deletion codes
 bool singlyLinkedListNoTail::removeFromTail() {
 

@@ -7,8 +7,5 @@ Node::Node() {
 }
 
 Node::~Node() {
-	if (next) {
-		delete[] next;
-		next = nullptr;
-	}
+  next=nullptr;
 }

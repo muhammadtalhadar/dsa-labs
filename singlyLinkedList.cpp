@@ -5,6 +5,9 @@ singlyLinkedList::singlyLinkedList():LinkedList() {
 	ssize = 0;
 }
 
+// will call parent class destructor
+singlyLinkedList::~singlyLinkedList(){}
+
 // deletion codes
 bool singlyLinkedList::removeFromTail()
 {

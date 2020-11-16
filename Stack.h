@@ -1,6 +1,6 @@
 #pragma once
 #include"singlyLinkedList.h"
-
+#include"singlyLinkedList.cpp"
 class Stack :public singlyLinkedList {
 public:
 	Stack();

@@ -1,5 +1,7 @@
 #pragma once
 #include "singlyLinkedList.h"
+#include"singlyLinkedList.cpp"
+
 class Queue :
     public singlyLinkedList
 {

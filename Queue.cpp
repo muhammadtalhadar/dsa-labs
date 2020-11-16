@@ -1,7 +1,7 @@
 #include "Queue.h"
 
 Queue::Queue():singlyLinkedList(){}
-Queue::~Queue(){}
+Queue::~Queue(){destroyLL();}
 
 void Queue::enqueue(int val)
 {
