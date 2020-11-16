@@ -9,14 +9,16 @@ protected:
 	Node *head;
 	Node *tail;
 public:
+
+	// constructor
+	LinkedList();
+	//destructor
+	~LinkedList();
+
+	// pure virtual methods
 	virtual void insertAtTail(int) = 0;
 	virtual void insertAtHead(int) = 0;
-	virtual bool deleteFromHead() = 0;
-	virtual bool deleteFromTail() = 0;
-	LinkedList()
-	{
-		head = nullptr;
-		tail = nullptr;
-	}
+	virtual bool removeFromHead() = 0;
+	virtual bool removeFromTail() = 0;
 };
 

@@ -1,104 +1,26 @@
 #pragma once
 #include "LinkedList.h"
+
 class singlyLinkedList:public LinkedList
 {
+private:
+	int ssize;
 public:
-	bool deleteFromTail()
-	{
+	singlyLinkedList();
 
-		if (head == nullptr && tail == nullptr)
-			return false;
+	// deletion codes
+	bool removeFromTail();
+	bool removeFromHead();
 
-		else
-		{
-			Node* temp = head;
-			while (1)
-			{
-				if (temp->next == tail)
-					break;
-				else
-					temp = temp->next;
-			}
+	// insertion codes
+	void insertAtHead(int);
+	void insertAtTail(int);
 
-			cout << temp->data << endl;
-			
-
-			return true;
-		}
-	}
-
-	bool deleteFromHead()
-	{
-		if (head == nullptr && tail == nullptr)
-			return false;
-
-		else
-		{
-			Node* temp = head;
-			head = head->next;
-			if (head == nullptr)
-				tail = nullptr;
-			delete temp;
-			return true;
-			
-		}
-	}
-
-	void insertAtHead(int value)
-	{
-		Node* newNode;
-		newNode = new Node;
-		newNode->data = value;
-		newNode->next = nullptr;
-
-		if (head == nullptr && tail == nullptr)
-		{
-			head = newNode;
-			tail = newNode;
-		}
-
-		else
-		{
-			newNode->next = head;
-			head = newNode;
-		}
-	}
-
-	void insertAtTail(int value)
-	{
-		Node* newNode;
-		newNode = new Node;
-		newNode->data = value;
-		newNode->next = nullptr;
-
-		if (head == nullptr && tail == nullptr)
-		{
-			head = newNode;
-			tail = newNode;
-		}
-
-		else
-		{
-			tail->next = newNode;
-			tail = newNode;
-		}
-
-	}
-
-	singlyLinkedList()
-	{
-
-	}
-
-	void print()
-	{
-		Node* temp = head;
-
-		while (temp != nullptr)
-		{
-			cout << temp->data << endl;
-			temp = temp->next;
-		}
-	}
+	// other methods
+	int front();
+	int back();
+	int size();
+	bool empty();
+	void print();
 };
 

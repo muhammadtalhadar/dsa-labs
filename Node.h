@@ -1,6 +1,8 @@
 #pragma once
 struct Node
 {
-	int data; //change to T afterwards
+	int data;
 	Node* next;
+	Node();
+	~Node();
 };
