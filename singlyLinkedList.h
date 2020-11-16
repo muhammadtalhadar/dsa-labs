@@ -1,6 +1,7 @@
 #pragma once
 #include "LinkedList.h"
 
+// SLL implementation without using LinkedList::tail
 class singlyLinkedList:public LinkedList
 {
 private:
