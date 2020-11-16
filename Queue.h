@@ -3,6 +3,7 @@
 class Queue :
     public singlyLinkedList
 {
+public:
     Queue();
     ~Queue();
 

@@ -1,18 +1,18 @@
+#include "singlyLinkedList1.h"
 #pragma once
-#include"singlyLinkedList.h"
 
-singlyLinkedList::singlyLinkedList():LinkedList() {
-	ssize = 0;
+singlyLinkedList1::singlyLinkedList1():LinkedList() {
+	int ssize = 0;
 }
 
 // deletion codes
-bool singlyLinkedList::removeFromTail()
+bool singlyLinkedList1::removeFromTail()
 {
 
 	if (head == nullptr && tail == nullptr)
 		return false;
 
-	Node* temptail= tail;
+	Node* temptail = tail;
 	Node* temphead = head;
 
 	// move ptr to previous node of tail
@@ -30,7 +30,7 @@ bool singlyLinkedList::removeFromTail()
 
 }
 
-bool singlyLinkedList::removeFromHead()
+bool singlyLinkedList1::removeFromHead()
 {
 	if (head == nullptr && tail == nullptr)
 		return false;
@@ -48,7 +48,7 @@ bool singlyLinkedList::removeFromHead()
 }
 
 // insertion codes
-void singlyLinkedList::insertAtHead(int value)
+void singlyLinkedList1::insertAtHead(int value)
 {
 	Node* newNode;
 	newNode = new Node;
@@ -69,7 +69,7 @@ void singlyLinkedList::insertAtHead(int value)
 	ssize++;
 }
 
-void singlyLinkedList::insertAtTail(int value)
+void singlyLinkedList1::insertAtTail(int value)
 {
 	Node* newNode;
 	newNode = new Node;
@@ -90,23 +90,23 @@ void singlyLinkedList::insertAtTail(int value)
 	ssize++;
 }
 
-int singlyLinkedList::front() {
+int singlyLinkedList1::front() {
 	return head->data;
 }
 
-int singlyLinkedList::back() {
+int singlyLinkedList1::back() {
 	return tail->data;
 }
 
-int singlyLinkedList::size() {
+int singlyLinkedList1::size() {
 	return ssize;
 }
 
-bool singlyLinkedList::empty() {
+bool singlyLinkedList1::empty() {
 	return (head && tail);
 }
 
-void singlyLinkedList::print()
+void singlyLinkedList1::print()
 {
 	Node* temp = head;
 
