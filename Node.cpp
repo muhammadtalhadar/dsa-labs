@@ -1,11 +1,13 @@
 #pragma once
 #include"Node.h"
 
-Node::Node() {
-	data = 0;
-	next = nullptr;
+template<typename T>
+Node<T>::Node() {
+  data = {};
+  next = nullptr;
 }
 
-Node::~Node() {
+template<typename T>
+Node<T>::~Node() {
   next=nullptr;
 }

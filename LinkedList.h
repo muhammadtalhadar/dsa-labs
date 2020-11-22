@@ -1,25 +1,31 @@
 #pragma once
 #include "Node.h"
-#include "Node.cpp"
+#include "NodeLinker.h"
 #include <iostream>
 using namespace std;
 
+template <class T>
 class LinkedList {
-protected:
-  Node *head;
-  Node *tail;
+private:
+  Node<T> *head;
 
 public:
+
   // constructor
-  LinkedList();
+  LinkedList<T>();
+  // copy constructor
+  LinkedList<T>(const LinkedList<T> &);
+
+  // insertion
+  void sortedInsert(T);
+
+  // deletion
+  T deleteFromPosition(int); // deletes the node at the particular position
+  void destroy(int,int); // deletes the nodes from starting to ending position
+  // misc
+  bool isEmpty() const;
+  void print() const;
+
   // destructor
   ~LinkedList();
-
-  void destroyLL();
-
-  // pure virtual methods
-  virtual void insertAtTail(int) = 0;
-  virtual void insertAtHead(int) = 0;
-  virtual bool removeFromHead() = 0;
-  virtual bool removeFromTail() = 0;
 };

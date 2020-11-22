@@ -1,7 +1,11 @@
 #pragma once
+#include<iostream>
+using namespace std;
+
+template<typename T>
 struct Node
 {
-	int data;
+	T data;
 	Node* next;
 	Node();
 	~Node();
