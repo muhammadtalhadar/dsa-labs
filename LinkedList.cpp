@@ -42,29 +42,33 @@ void LinkedList<T>::sortedInsert(T val)
 {
   if (!this->isEmpty())
   {
-    Node<T>* temp=new Node<T>;
-    temp->data=val;
+    Node<T> *temp = new Node<T>;
+    temp->data = val;
     // if current node was less than head, then head must be updated
-    if(val < this->head->data){
-      temp->next=head;
-      this->head=temp;
+    if (val < this->head->data)
+    {
+      temp->next = head;
+      this->head = temp;
     }
-    else{
-      Node<T>* previousNode=this->head;
-      Node<T>* currentNode=previousNode->next;
+    else
+    {
+      Node<T> *previousNode = this->head;
+      Node<T> *currentNode = previousNode->next;
 
-      while(currentNode && val < currentNode->data){
-	previousNode=currentNode;
-	currentNode=currentNode->next;
+      while (currentNode && val < currentNode->data)
+      {
+        previousNode = currentNode;
+        currentNode = currentNode->next;
       }
 
-      temp->next=currentNode;
-      previousNode->next=temp;
+      temp->next = currentNode;
+      previousNode->next = temp;
     }
   }
-  else{
-    this->head=new Node<T>;
-    this->head->data=val;
+  else
+  {
+    this->head = new Node<T>;
+    this->head->data = val;
   }
 }
 
@@ -72,25 +76,39 @@ void LinkedList<T>::sortedInsert(T val)
 template <typename T>
 T LinkedList<T>::deleteFromPosition(int position)
 {
+  T yeet = {};
   if (!this->isEmpty())
   {
-    T yeet = {};
-    Node<T> *previousNode = nullptr;
-    Node<T> *currentNode = this->head;
-
-    for (int i = 0; i < position && currentNode->head; i++)
+    if (position == 0)
     {
-      previousNode = currentNode;
-      currentNode = currentNode->next;
+      return T();
     }
 
-    yeet = currentNode->data;
-    previousNode->next = currentNode->next;
-    delete[] currentNode;
+    Node<T> *temp = this->head->next;
 
-    return yeet;
+    if (position == 1)
+    {
+      yeet = this->head->data;
+      delete this->head;
+      this->head = temp;
+      return yeet;
+    }
+
+    Node<T> *previous = this->head;
+    for (int i = 1; i < position-1; i++)
+    {
+      previous = temp;
+      temp = temp->next;
+    }
+
+    if (temp)
+    {
+      previous->next = temp->next;
+      yeet = temp->data;
+      delete temp;
+    }
   }
-  return T();
+  return yeet;
 }
 
 template <typename T>

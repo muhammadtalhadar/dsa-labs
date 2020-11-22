@@ -11,7 +11,10 @@ int main(){
   }
 
   cout<<endl;
+  cout<<"Orignal LL: ";
   ll.print();
   cout<<endl;
+  ll.deleteFromPosition(7);
+  ll.print();
   return 0;
 }
