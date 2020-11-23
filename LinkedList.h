@@ -26,6 +26,9 @@ public:
   bool isEmpty() const;
   void print() const;
 
+  // max sum
+  LinkedList<T> maxSum(const LinkedList<T>&);
+
   // destructor
   ~LinkedList();
 };

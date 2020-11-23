@@ -17,9 +17,8 @@ LinkedList<T>::LinkedList(const LinkedList<T> &obj)
     this->head = new Node<T>;
     this->head->data = obj.head->data;
 
-    Node<T> toInsertAt = this->head;
-    Node<T> toBeInserted = obj.head->next;
-    ;
+    Node<T>* toInsertAt = this->head;
+    Node<T>* toBeInserted = obj.head->next;
 
     while (toBeInserted)
     {
@@ -55,7 +54,7 @@ void LinkedList<T>::sortedInsert(T val)
       Node<T> *previousNode = this->head;
       Node<T> *currentNode = previousNode->next;
 
-      while (currentNode && val < currentNode->data)
+      while (currentNode && val > currentNode->data)
       {
         previousNode = currentNode;
         currentNode = currentNode->next;
@@ -114,9 +113,25 @@ T LinkedList<T>::deleteFromPosition(int position)
 template <typename T>
 void LinkedList<T>::destroy(int start, int end)
 {
-  if (!this->isEmpty())
-  {
-  }
+    if (!this->isEmpty() && start != end && end>start) {
+        
+        Node<T>* behindStart = nullptr;
+        Node<T>* temp_head = this->head;
+
+        // move to 'start' element first
+        for (int i = 0; i < start-1; i++) {
+            behindStart = temp_head;
+            temp_head = temp_head->next;
+        }
+
+        Node<T>* temp_next = nullptr;
+        for (int i = 0; i <= end-start && temp_head; i++) {
+            temp_next = temp_head->next;
+            delete temp_head;
+            temp_head = temp_next;
+        }
+        behindStart->next = temp_next;
+    }
 }
 
 // misc
@@ -151,6 +166,62 @@ void LinkedList<T>::print() const
 template <typename T>
 LinkedList<T>::~LinkedList()
 {
-  this->destroy(0, 0);
-  this->head = nullptr;
+    Node<T>* temp = this->head;
+    while (temp) {
+        temp = temp->next;
+        delete head;
+        this->head = temp;
+    }
 };
+
+template<typename T>
+LinkedList<T> LinkedList<T>::maxSum(const LinkedList<T>& rhs) {
+    LinkedList<T> result;
+    Node<T>* lhs_head = this->head;
+    Node<T>* rhs_head = rhs.head;
+
+    if (lhs_head && !rhs_head) {
+        return *this;
+    }
+    if (rhs_head && !lhs_head) {
+        return rhs;
+    }
+
+    Node<T>* toInsert = nullptr;
+
+    if (lhs_head->data > rhs_head->data) {
+        toInsert = lhs_head;
+    }
+    else {
+        toInsert = rhs_head;
+    }
+
+    while (lhs_head && rhs_head) {
+
+        result.sortedInsert(toInsert->data);
+
+        if ((toInsert == lhs_head) && lhs_head->data == rhs_head->data) {
+            toInsert = rhs_head;
+        }
+        else if ((toInsert == rhs_head) && rhs_head->data == lhs_head->data) {
+            toInsert = lhs_head;
+        }
+
+        lhs_head = lhs_head->next;
+        rhs_head = rhs_head->next;
+    }
+
+    if (lhs_head) {
+        toInsert = lhs_head;
+    }
+    else if (rhs_head) {
+        toInsert = rhs_head;
+    }
+
+    while (toInsert) {
+        result.sortedInsert(toInsert->data);
+        toInsert->next;
+    }
+
+    return result;
+}

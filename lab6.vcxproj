@@ -139,19 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lecture10.cpp" />
-    <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="Node.cpp" />
-    <ClCompile Include="Queue.cpp" />
-    <ClCompile Include="singlyLinkedList.cpp" />
-    <ClCompile Include="Stack.cpp" />
+    <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="LinkedListLinker.h" />
+    <ClInclude Include="LinkedListMaxSum.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="NodeLinker.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LinkedList.h" />
-    <ClInclude Include="Node.h" />
-    <ClInclude Include="Queue.h" />
-    <ClInclude Include="singlyLinkedList.h" />
-    <ClInclude Include="Stack.h" />
+    <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Node.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
