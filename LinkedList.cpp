@@ -209,6 +209,7 @@ LinkedList<T> LinkedList<T>::maxSum(const LinkedList<T>& rhs) {
 
         lhs_head = lhs_head->next;
         rhs_head = rhs_head->next;
+        toInsert=toInsert->next;
     }
 
     if (lhs_head) {
@@ -220,7 +221,7 @@ LinkedList<T> LinkedList<T>::maxSum(const LinkedList<T>& rhs) {
 
     while (toInsert) {
         result.sortedInsert(toInsert->data);
-        toInsert->next;
+        toInsert=toInsert->next;
     }
 
     return result;
