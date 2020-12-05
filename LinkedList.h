@@ -1,11 +1,14 @@
 #pragma once
 #include <iostream>
-#include"Node.h"
-#include"NodeLink.h"
+#include "Node.h"
+#include "NodeLink.h"
 
-template <class T> class LinkedList {
+template <class T>
+class LinkedList
+{
 private:
   Node<T> *head;
+
 public:
   LinkedList();
   LinkedList<T>(const LinkedList<T> &);
