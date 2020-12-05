@@ -19,16 +19,16 @@ LinkedList<T>::LinkedList(const LinkedList<T> &rhs)
     this->head->data = rhs.head->data;
 
     // now create the rest of LL
-    Node<T> *currentElemet = rhs->head->next;
+    Node<T> *toInsert = rhs->head->next;
     Node<T> *temp = this->head;
 
-    while (currentElemet->next)
+    while (toInsert->next)
     {
       temp->next = new Node<T>;
-      temp->data = currentElemet->data;
+      temp->data = toInsert->data;
 
       temp = temp->next;
-      currentElemet = currentElemet->next;
+      toInsert = toInsert->next;
     }
   }
 }
@@ -84,7 +84,7 @@ T LinkedList<T>::deleteFromHead()
   delete this->head;
   this->head = temp;
 
-  //
+  // return deleted data
   return tempData;
 }
 

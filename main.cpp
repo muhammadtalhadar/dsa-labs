@@ -13,6 +13,10 @@ Queue<T> reverseQueue(Queue<T> obj)
   int size = obj.size();
   Queue<T> reverse;
   
+  if(size==0){
+    return reverse;
+  }
+  
   for (int i = 0; i < size; i++)
   {
     for (int j = 0; j < size - i - 1; j++)
@@ -39,5 +43,6 @@ int main()
   cout << endl;
   Queue<char> reverseQ1 = reverseQueue(q1);
   reverseQ1.display();
+  cout<<endl;
   return 0;
 }
