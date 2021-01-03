@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/talha/repos/dsa-labs/BinaryTree.h
+BinaryTreeNode.h
+/home/talha/repos/dsa-labs/BinaryTreeNode.h
+
+/home/talha/repos/dsa-labs/BinaryTreeNode.h
+
+/home/talha/repos/dsa-labs/main.cpp
+iostream
+-
+BinaryTree.h
+/home/talha/repos/dsa-labs/BinaryTree.h
+

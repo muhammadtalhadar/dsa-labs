@@ -1,21 +1,22 @@
-//
-// Created by talha on 3/1/21.
-//
-
+// TODO: separate BinaryTree declaration and implementation into .cpp and .h files
 #pragma once
 
 #include "BinaryTreeNode.h"
+
+
+template<class T>
+int largest(const int a, const int b){
+  if(a>=b) return a;
+  return b; 
+}
 
 template<class T>
 class BinaryTree {
 protected:
     BinaryTreeNode<T> *root;
 private:
-    int max(int a, int b)const;
 
     int binaryTreeHeight(BinaryTreeNode<T> *node)const;
-
-    void copyBinaryTree(BinaryTreeNode<T> *&copiedTree, BinaryTreeNode<T> *treeToCopy);
 
     void inorder(BinaryTreeNode<T> *ptr);
 
@@ -30,8 +31,6 @@ private:
     int leafNodeCount(BinaryTreeNode<T>* node)const;
 public:
 
-    int leafNodeTotalCount()const;
-
     explicit BinaryTree(BinaryTreeNode<T> *root = nullptr);
 
     void insert(T data);
@@ -45,31 +44,14 @@ public:
     bool search(T data)const;
 
     int height()const;
+
+      int leafNodeTotalCount()const;
 };
 
 template<class T>
 BinaryTree<T>::BinaryTree(BinaryTreeNode<T> *root):root(root) {}
 
-template<class T>
-void BinaryTree<T>::insert(T data) {
-    insertData(this->root, data);
-}
-
-template<class T>
-void BinaryTree<T>::print_inorder() {
-    inorder(this->root);
-}
-
-template<class T>
-void BinaryTree<T>::print_preorder() {
-    preorder(this->root);
-}
-
-template<class T>
-void BinaryTree<T>::print_postorder() {
-    postorder(this->root);
-}
-
+// insert data
 template<class T>
 void BinaryTree<T>::insertData(BinaryTreeNode<T> *&node, T data) {
 
@@ -90,16 +72,12 @@ void BinaryTree<T>::insertData(BinaryTreeNode<T> *&node, T data) {
         insertData(node->rnode, data);
     }
 }
-
 template<class T>
-void BinaryTree<T>::postorder(BinaryTreeNode<T> *ptr) {
-    if (ptr) {
-        postorder(ptr->lnode);
-        postorder(ptr->rnode);
-        std::cout << ptr->data << " ";
-    }
+void BinaryTree<T>::insert(T data) {
+    insertData(this->root, data);
 }
 
+// preorder
 template<class T>
 void BinaryTree<T>::preorder(BinaryTreeNode<T> *ptr) {
     if (ptr) {
@@ -110,6 +88,12 @@ void BinaryTree<T>::preorder(BinaryTreeNode<T> *ptr) {
 }
 
 template<class T>
+void BinaryTree<T>::print_preorder() {
+    preorder(this->root);
+}
+
+//inorder
+template<class T>
 void BinaryTree<T>::inorder(BinaryTreeNode<T> *ptr) {
     if (ptr) {
         inorder(ptr->lnode);
@@ -117,39 +101,26 @@ void BinaryTree<T>::inorder(BinaryTreeNode<T> *ptr) {
         inorder(ptr->rnode);
     }
 }
-
 template<class T>
-void BinaryTree<T>::copyBinaryTree(BinaryTreeNode<T> *&copiedTree, BinaryTreeNode<T> *treeToCopy) {
-    if (copiedTree == nullptr) {
-        treeToCopy = nullptr;
-    } else {
-        copiedTree = new BinaryTreeNode<T>;
-        copiedTree->data = treeToCopy->data;
-        copyBinaryTree(copiedTree->lnode, treeToCopy->lnode);
-        copyBinaryTree(copiedTree->rnode, treeToCopy->rnode);
+void BinaryTree<T>::print_inorder() {
+    inorder(this->root);
+}
+
+// print postorder
+template<class T>
+void BinaryTree<T>::postorder(BinaryTreeNode<T> *ptr) {
+    if (ptr) {
+        postorder(ptr->lnode);
+        postorder(ptr->rnode);
+        std::cout << ptr->data << " ";
     }
 }
-
 template<class T>
-int BinaryTree<T>::binaryTreeHeight(BinaryTreeNode<T> *node) const{
-    if (node == nullptr) {
-        return 0;
-    } else {
-        return 1 + max(binaryTreeHeight(node->lnode), binaryTreeHeight(node->rnode));
-    }
+void BinaryTree<T>::print_postorder() {
+    postorder(this->root);
 }
 
-template<class T>
-int BinaryTree<T>::max(const int a, const int b) const{
-    if (a >= b) return a;
-    return b;
-}
-
-template<class T>
-bool BinaryTree<T>::search(T data) const {
-    return searchData(this->root,data);
-}
-
+//
 template<class T>
 bool BinaryTree<T>::searchData(BinaryTreeNode<T> *node, T data)const {
 
@@ -168,16 +139,30 @@ bool BinaryTree<T>::searchData(BinaryTreeNode<T> *node, T data)const {
     }
 }
 
+//wrapper method
+template<class T>
+bool BinaryTree<T>::search(T data) const {
+    return searchData(this->root,data);
+}
+
+//
+template<class T>
+int BinaryTree<T>::binaryTreeHeight(BinaryTreeNode<T> *node) const{
+    if (node == nullptr) {
+        return 0;
+    } else {
+        return 1 + largest<T>(binaryTreeHeight(node->lnode), binaryTreeHeight(node->rnode));
+    }
+}
+
+//wrapper method
 template<class T>
 int BinaryTree<T>::height() const {
     return binaryTreeHeight(this->root);
 }
 
-template<class T>
-int BinaryTree<T>::leafNodeTotalCount() const {
-    return leafNodeCount(this->root);
-}
 
+// counts leaf nodes in a BST
 template<class T>
 int BinaryTree<T>::leafNodeCount(BinaryTreeNode<T> *node) const {
     // base case
@@ -191,4 +176,10 @@ int BinaryTree<T>::leafNodeCount(BinaryTreeNode<T> *node) const {
     else{
         return leafNodeCount(node->lnode)+leafNodeCount(node->rnode);
     }
+}
+
+//wrapper method
+template<class T>
+int BinaryTree<T>::leafNodeTotalCount() const {
+    return leafNodeCount(this->root);
 }
