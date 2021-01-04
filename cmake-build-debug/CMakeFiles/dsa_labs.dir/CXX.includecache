@@ -6,15 +6,37 @@
 
 #IncludeRegexTransform: 
 
+/home/talha/repos/dsa-labs/BinaryTree.cpp
+iostream
+-
+BinaryTree.h
+/home/talha/repos/dsa-labs/BinaryTree.h
+
 /home/talha/repos/dsa-labs/BinaryTree.h
 BinaryTreeNode.h
 /home/talha/repos/dsa-labs/BinaryTreeNode.h
 
+/home/talha/repos/dsa-labs/BinaryTreeLinker.h
+BinaryTree.cpp
+/home/talha/repos/dsa-labs/BinaryTree.cpp
+
+/home/talha/repos/dsa-labs/BinaryTreeNode.cpp
+BinaryTreeNode.h
 /home/talha/repos/dsa-labs/BinaryTreeNode.h
+
+/home/talha/repos/dsa-labs/BinaryTreeNode.h
+
+/home/talha/repos/dsa-labs/BinaryTreeNodeLinker.h
+BinaryTreeNode.cpp
+/home/talha/repos/dsa-labs/BinaryTreeNode.cpp
 
 /home/talha/repos/dsa-labs/main.cpp
 iostream
 -
 BinaryTree.h
 /home/talha/repos/dsa-labs/BinaryTree.h
+BinaryTreeNodeLinker.h
+/home/talha/repos/dsa-labs/BinaryTreeNodeLinker.h
+BinaryTreeLinker.h
+/home/talha/repos/dsa-labs/BinaryTreeLinker.h
 

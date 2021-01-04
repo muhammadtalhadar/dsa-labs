@@ -143,6 +143,60 @@ dsa_labs/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/build
 .PHONY : dsa_labs/fast
 
+BinaryTree.o: BinaryTree.cpp.o
+
+.PHONY : BinaryTree.o
+
+# target to build an object file
+BinaryTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o
+.PHONY : BinaryTree.cpp.o
+
+BinaryTree.i: BinaryTree.cpp.i
+
+.PHONY : BinaryTree.i
+
+# target to preprocess a source file
+BinaryTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/BinaryTree.cpp.i
+.PHONY : BinaryTree.cpp.i
+
+BinaryTree.s: BinaryTree.cpp.s
+
+.PHONY : BinaryTree.s
+
+# target to generate assembly for a file
+BinaryTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/BinaryTree.cpp.s
+.PHONY : BinaryTree.cpp.s
+
+BinaryTreeNode.o: BinaryTreeNode.cpp.o
+
+.PHONY : BinaryTreeNode.o
+
+# target to build an object file
+BinaryTreeNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/BinaryTreeNode.cpp.o
+.PHONY : BinaryTreeNode.cpp.o
+
+BinaryTreeNode.i: BinaryTreeNode.cpp.i
+
+.PHONY : BinaryTreeNode.i
+
+# target to preprocess a source file
+BinaryTreeNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/BinaryTreeNode.cpp.i
+.PHONY : BinaryTreeNode.cpp.i
+
+BinaryTreeNode.s: BinaryTreeNode.cpp.s
+
+.PHONY : BinaryTreeNode.s
+
+# target to generate assembly for a file
+BinaryTreeNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/BinaryTreeNode.cpp.s
+.PHONY : BinaryTreeNode.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -179,6 +233,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... dsa_labs"
+	@echo "... BinaryTree.o"
+	@echo "... BinaryTree.i"
+	@echo "... BinaryTree.s"
+	@echo "... BinaryTreeNode.o"
+	@echo "... BinaryTreeNode.i"
+	@echo "... BinaryTreeNode.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

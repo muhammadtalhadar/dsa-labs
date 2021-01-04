@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/talha/repos/dsa-labs/BinaryTree.cpp" "/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o"
+  "/home/talha/repos/dsa-labs/BinaryTreeNode.cpp" "/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles/dsa_labs.dir/BinaryTreeNode.cpp.o"
   "/home/talha/repos/dsa-labs/main.cpp" "/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles/dsa_labs.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

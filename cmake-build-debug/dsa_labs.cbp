@@ -84,10 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/talha/repos/dsa-labs/BinaryTree.cpp">
+			<Option target="dsa_labs"/>
+		</Unit>
 		<Unit filename="/home/talha/repos/dsa-labs/BinaryTree.h">
 			<Option target="dsa_labs"/>
 		</Unit>
+		<Unit filename="/home/talha/repos/dsa-labs/BinaryTreeLinker.h">
+			<Option target="dsa_labs"/>
+		</Unit>
+		<Unit filename="/home/talha/repos/dsa-labs/BinaryTreeNode.cpp">
+			<Option target="dsa_labs"/>
+		</Unit>
 		<Unit filename="/home/talha/repos/dsa-labs/BinaryTreeNode.h">
+			<Option target="dsa_labs"/>
+		</Unit>
+		<Unit filename="/home/talha/repos/dsa-labs/BinaryTreeNodeLinker.h">
 			<Option target="dsa_labs"/>
 		</Unit>
 		<Unit filename="/home/talha/repos/dsa-labs/main.cpp">

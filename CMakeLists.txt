@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-add_executable(dsa_labs main.cpp BinaryTreeNode.h BinaryTree.h)
+add_executable(dsa_labs main.cpp BinaryTreeNode.h BinaryTree.h BinaryTreeNode.cpp BinaryTree.cpp BinaryTreeNodeLinker.h BinaryTreeLinker.h)

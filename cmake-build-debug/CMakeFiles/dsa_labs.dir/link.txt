@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/dsa_labs.dir/main.cpp.o  -o dsa_labs 
+/usr/bin/c++  -g   CMakeFiles/dsa_labs.dir/main.cpp.o CMakeFiles/dsa_labs.dir/BinaryTreeNode.cpp.o CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o  -o dsa_labs 
