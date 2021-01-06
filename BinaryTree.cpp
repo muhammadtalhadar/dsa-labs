@@ -160,10 +160,95 @@ void BinaryTree<T>::mirror_inner(BinaryTreeNode<T> *& node) {
     }
 }
 
-// returns the larger of two integers
+template<class T>
+bool BinaryTree<T>::delete_inner(BinaryTreeNode<T> *&node, T data) {
 
+    // base case
+    if(node==nullptr) return false;
+
+    //positive result cases
+    BinaryTreeNode<T>* temp= nullptr;
+    if(node->data==data){
+        // when both subtrees are empty
+        if(node->lnode==nullptr && node->rnode== nullptr){
+            delete node;
+            node= nullptr;
+        }
+        //where left subtree is empty
+        else if(node->lnode==nullptr){
+            temp=node->rnode;
+            delete node;
+            node=temp;
+        }
+        //when right subtree is empty
+        else if(node->rnode==nullptr){
+            temp=node->lnode;
+            delete node;
+            node=temp;
+        }
+        // when neither subtree is empty
+        else{
+            BinaryTreeNode<T>* predecessor=node->lnode;
+            temp=nullptr;
+
+            // locate the predecessor to node to be deleted
+            while(predecessor->rnode!= nullptr){
+                temp=predecessor;
+                predecessor=predecessor->rnode;
+            }
+
+            //update node to delete's data with predecessor's data
+            node->data=predecessor->data;
+
+            // update predecessor's original parent and delete predecessor from it's original position.
+            if(temp==nullptr){ // incase, predecessor was node->lnode and no iteration was done
+                node->lnode=predecessor->lnode;
+            }
+            else{
+                temp->rnode=predecessor->lnode;
+            }
+            delete predecessor;
+        }
+        return true;
+    }
+
+    //general case
+    if(data<node->data){
+        return delete_inner(node->lnode, data);
+    }
+    else{
+        return delete_inner(node->rnode, data);
+    }
+}
+
+template<class T>
+bool BinaryTree<T>::deletenode(T data) {
+    return delete_inner(this->root, data);
+}
+
+template<class T>
+BinaryTreeNode<T> *BinaryTree<T>::min_inner(BinaryTreeNode<T> *node) const {
+    if(node->lnode==nullptr){
+        return node;
+    }
+    else{
+        return min_inner(node->lnode);
+    }
+}
+
+template<class T>
+BinaryTreeNode<T> *BinaryTree<T>::min() const {
+    return new BinaryTreeNode<T>(min_inner(this->root)->data);
+}
+
+// returns the larger of two integers
 template<class T>
 int largest(const int a, const int b) {
     if(a>=b) return a;
     return b;
+}
+
+template<class T>
+bool isleaf(const BinaryTreeNode<T> *node) {
+    return (node->rnode== nullptr && node->lnode==nullptr);
 }

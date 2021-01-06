@@ -2,9 +2,13 @@
 #pragma once
 
 #include "BinaryTreeNode.h"
+#include "BinaryTreeNodeLinker.h"
 
 template<class T>
-int largest(const int a, const int b);
+        int largest(const int a, const int b);
+
+template<class T>
+        bool isleaf(const BinaryTreeNode<T>* node);
 
 
 template<class T>
@@ -31,6 +35,11 @@ private:
     int leaves_inner(BinaryTreeNode<T>* node)const;
 
     void mirror_inner(BinaryTreeNode<T>*& node);
+
+    bool delete_inner(BinaryTreeNode<T>*& node, T data);
+
+    //returns mem handle to node with min value;
+    BinaryTreeNode<T>* min_inner(BinaryTreeNode<T>* node)const;
 public:
 
     explicit BinaryTree(BinaryTreeNode<T> *root = nullptr);
@@ -50,4 +59,9 @@ public:
     int leaves()const;
 
     void mirror();
+
+    bool deletenode(T data);
+
+    //returns a pointer to a copy of of the node with the smallest value,but child pointers are null.
+    BinaryTreeNode<T>* min()const;
 };
