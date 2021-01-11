@@ -44,7 +44,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/talha/repos/dsa-labs/."/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -67,7 +66,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/talha/repos/dsa-labs/."/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -93,13 +91,7 @@
 		<Unit filename="/home/talha/repos/dsa-labs/BinaryTreeLinker.h">
 			<Option target="dsa_labs"/>
 		</Unit>
-		<Unit filename="/home/talha/repos/dsa-labs/BinaryTreeNode.cpp">
-			<Option target="dsa_labs"/>
-		</Unit>
-		<Unit filename="/home/talha/repos/dsa-labs/BinaryTreeNode.h">
-			<Option target="dsa_labs"/>
-		</Unit>
-		<Unit filename="/home/talha/repos/dsa-labs/BinaryTreeNodeLinker.h">
+		<Unit filename="/home/talha/repos/dsa-labs/Stack.h">
 			<Option target="dsa_labs"/>
 		</Unit>
 		<Unit filename="/home/talha/repos/dsa-labs/main.cpp">

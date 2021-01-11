@@ -1,15 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
-project(dsa_assignments)
+project(dsa_labs)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
-include_directories(.)
-
-add_executable(dsa_assignments
-        BinaryTree.cpp
-        BinaryTree.h
-        BinaryTreeLinker.h
-        BinaryTreeNode.cpp
-        BinaryTreeNode.h
-        BinaryTreeNodeLinker.h
-        main.cpp)
+add_executable(dsa_labs main.cpp BinaryTree.h Stack.h BinaryTree.cpp BinaryTreeLinker.h)

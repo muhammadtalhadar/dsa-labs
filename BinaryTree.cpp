@@ -257,34 +257,81 @@ bool BinaryTree<T>::balanced() const {
 
 template<class T>
 T BinaryTree<T>::ksmallest(int k) const {
-    BinaryTreeNode<T>* prev=this->root;
     BinaryTreeNode<T>* current=this->root;
+    Stack<BinaryTreeNode<T>*> stk;
+    Stack<T> result;
+    int resultCount=0;
 
-    while(k){
-        if(current->lnode)
-            current=current->lnode;
-        k--;
-        continue;
-    }
-    return T();
+        while((current || !stk.empty()) && resultCount!=k){
+            if(current!=nullptr){
+                stk.push(current);
+                current=current->lnode;
+            }
+            else{
+                current=stk.pop();
+
+                result.push(current->data);
+                resultCount++;
+
+                current=current->rnode;
+            }
+        }
+
+    return result.top();
 }
 
 template<class T>
 T BinaryTree<T>::klargest(int k) const {
-    BinaryTreeNode<T>* prev=this->root;
     BinaryTreeNode<T>* current=this->root;
+    Stack<BinaryTreeNode<T>*> stk;
+    Stack<T> result;
 
-    while(k){
-        prev=current;
-        if(current->lnode){
+    while(current || !stk.empty()){
+        if(current!=nullptr){
+            stk.push(current);
             current=current->lnode;
         }
-        else if(!current->lnode){
-            current=prev
+        else{
+            current=stk.pop();
+            result.push(current->data);
+            current=current->rnode;
         }
     }
 
-    return nullptr;
+    // now that all elements are placed onto the stack, pop k-1 elements
+    for(int i=1; i<k && !result.empty();i++){
+        result.pop();
+    }
+
+    return result.top();
+}
+
+template<class T>
+void BinaryTree<T>::validateBSTRange(T lowerLimit, T upperLimit) {
+    BinaryTreeNode<T>* current=this->root;
+    Stack<BinaryTreeNode<T>*> stk;
+    Stack<T> result;
+
+    while(current || !stk.empty()){
+        if(current!=nullptr){
+            stk.push(current);
+            current=current->lnode;
+        }
+        else{
+            current=stk.pop();
+            result.push(current->data);
+            current=current->rnode;
+        }
+    }
+
+    T tempData;
+    while(!result.empty()){
+        tempData=result.pop();
+
+        if(tempData<lowerLimit || tempData>upperLimit){
+            this->deletenode(tempData);
+        }
+    }
 }
 
 // returns the larger of two integers

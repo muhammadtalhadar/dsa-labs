@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/dsa_assignments.dir/BinaryTree.cpp.o CMakeFiles/dsa_assignments.dir/BinaryTreeNode.cpp.o CMakeFiles/dsa_assignments.dir/main.cpp.o  -o dsa_assignments 

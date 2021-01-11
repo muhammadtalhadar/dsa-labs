@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /home/talha/repos/dsa-labs/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/dsa_assignments.dir/all
+all: CMakeFiles/dsa_labs.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/dsa_assignments.dir/clean
+clean: CMakeFiles/dsa_labs.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/dsa_assignments.dir
+# Target rules for target CMakeFiles/dsa_labs.dir
 
 # All Build rule for target.
-CMakeFiles/dsa_assignments.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target dsa_assignments"
-.PHONY : CMakeFiles/dsa_assignments.dir/all
+CMakeFiles/dsa_labs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target dsa_labs"
+.PHONY : CMakeFiles/dsa_labs.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/dsa_assignments.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/dsa_assignments.dir/all
+CMakeFiles/dsa_labs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/dsa_labs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/dsa_assignments.dir/rule
+.PHONY : CMakeFiles/dsa_labs.dir/rule
 
 # Convenience name for target.
-dsa_assignments: CMakeFiles/dsa_assignments.dir/rule
+dsa_labs: CMakeFiles/dsa_labs.dir/rule
 
-.PHONY : dsa_assignments
+.PHONY : dsa_labs
 
 # clean rule for target.
-CMakeFiles/dsa_assignments.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/clean
-.PHONY : CMakeFiles/dsa_assignments.dir/clean
+CMakeFiles/dsa_labs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/clean
+.PHONY : CMakeFiles/dsa_labs.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

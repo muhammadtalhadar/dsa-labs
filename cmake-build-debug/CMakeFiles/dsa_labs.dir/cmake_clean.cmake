@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o"
-  "CMakeFiles/dsa_labs.dir/BinaryTreeNode.cpp.o"
   "CMakeFiles/dsa_labs.dir/main.cpp.o"
   "dsa_labs"
   "dsa_labs.pdb"

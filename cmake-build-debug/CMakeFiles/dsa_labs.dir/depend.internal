@@ -4,10 +4,15 @@
 CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o
  /home/talha/repos/dsa-labs/BinaryTree.cpp
  /home/talha/repos/dsa-labs/BinaryTree.h
- /home/talha/repos/dsa-labs/BinaryTreeNode.h
-CMakeFiles/dsa_labs.dir/BinaryTreeNode.cpp.o
  /home/talha/repos/dsa-labs/BinaryTreeNode.cpp
  /home/talha/repos/dsa-labs/BinaryTreeNode.h
+ /home/talha/repos/dsa-labs/BinaryTreeNodeLinker.h
+ /home/talha/repos/dsa-labs/Node.cpp
+ /home/talha/repos/dsa-labs/Node.h
+ /home/talha/repos/dsa-labs/NodeLinker.h
+ /home/talha/repos/dsa-labs/Stack.cpp
+ /home/talha/repos/dsa-labs/Stack.h
+ /home/talha/repos/dsa-labs/StackLinker.h
 CMakeFiles/dsa_labs.dir/main.cpp.o
  /home/talha/repos/dsa-labs/BinaryTree.cpp
  /home/talha/repos/dsa-labs/BinaryTree.h
@@ -15,4 +20,10 @@ CMakeFiles/dsa_labs.dir/main.cpp.o
  /home/talha/repos/dsa-labs/BinaryTreeNode.cpp
  /home/talha/repos/dsa-labs/BinaryTreeNode.h
  /home/talha/repos/dsa-labs/BinaryTreeNodeLinker.h
+ /home/talha/repos/dsa-labs/Node.cpp
+ /home/talha/repos/dsa-labs/Node.h
+ /home/talha/repos/dsa-labs/NodeLinker.h
+ /home/talha/repos/dsa-labs/Stack.cpp
+ /home/talha/repos/dsa-labs/Stack.h
+ /home/talha/repos/dsa-labs/StackLinker.h
  /home/talha/repos/dsa-labs/main.cpp

@@ -3,10 +3,15 @@
 
 CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../BinaryTree.cpp
 CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../BinaryTree.h
+CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../BinaryTreeNode.cpp
 CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../BinaryTreeNode.h
-
-CMakeFiles/dsa_labs.dir/BinaryTreeNode.cpp.o: ../BinaryTreeNode.cpp
-CMakeFiles/dsa_labs.dir/BinaryTreeNode.cpp.o: ../BinaryTreeNode.h
+CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../BinaryTreeNodeLinker.h
+CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../Node.cpp
+CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../Node.h
+CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../NodeLinker.h
+CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../Stack.cpp
+CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../Stack.h
+CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o: ../StackLinker.h
 
 CMakeFiles/dsa_labs.dir/main.cpp.o: ../BinaryTree.cpp
 CMakeFiles/dsa_labs.dir/main.cpp.o: ../BinaryTree.h
@@ -14,5 +19,11 @@ CMakeFiles/dsa_labs.dir/main.cpp.o: ../BinaryTreeLinker.h
 CMakeFiles/dsa_labs.dir/main.cpp.o: ../BinaryTreeNode.cpp
 CMakeFiles/dsa_labs.dir/main.cpp.o: ../BinaryTreeNode.h
 CMakeFiles/dsa_labs.dir/main.cpp.o: ../BinaryTreeNodeLinker.h
+CMakeFiles/dsa_labs.dir/main.cpp.o: ../Node.cpp
+CMakeFiles/dsa_labs.dir/main.cpp.o: ../Node.h
+CMakeFiles/dsa_labs.dir/main.cpp.o: ../NodeLinker.h
+CMakeFiles/dsa_labs.dir/main.cpp.o: ../Stack.cpp
+CMakeFiles/dsa_labs.dir/main.cpp.o: ../Stack.h
+CMakeFiles/dsa_labs.dir/main.cpp.o: ../StackLinker.h
 CMakeFiles/dsa_labs.dir/main.cpp.o: ../main.cpp
 

@@ -13,8 +13,14 @@ BinaryTree.h
 /home/talha/repos/dsa-labs/BinaryTree.h
 
 /home/talha/repos/dsa-labs/BinaryTree.h
+Stack.h
+/home/talha/repos/dsa-labs/Stack.h
+StackLinker.h
+/home/talha/repos/dsa-labs/StackLinker.h
 BinaryTreeNode.h
 /home/talha/repos/dsa-labs/BinaryTreeNode.h
+BinaryTreeNodeLinker.h
+/home/talha/repos/dsa-labs/BinaryTreeNodeLinker.h
 
 /home/talha/repos/dsa-labs/BinaryTreeLinker.h
 BinaryTree.cpp
@@ -30,13 +36,37 @@ BinaryTreeNode.h
 BinaryTreeNode.cpp
 /home/talha/repos/dsa-labs/BinaryTreeNode.cpp
 
+/home/talha/repos/dsa-labs/Node.cpp
+Node.h
+/home/talha/repos/dsa-labs/Node.h
+
+/home/talha/repos/dsa-labs/Node.h
+iostream
+-
+
+/home/talha/repos/dsa-labs/NodeLinker.h
+Node.cpp
+/home/talha/repos/dsa-labs/Node.cpp
+
+/home/talha/repos/dsa-labs/Stack.cpp
+Stack.h
+/home/talha/repos/dsa-labs/Stack.h
+
+/home/talha/repos/dsa-labs/Stack.h
+Node.h
+/home/talha/repos/dsa-labs/Node.h
+NodeLinker.h
+/home/talha/repos/dsa-labs/NodeLinker.h
+
+/home/talha/repos/dsa-labs/StackLinker.h
+Stack.cpp
+/home/talha/repos/dsa-labs/Stack.cpp
+
 /home/talha/repos/dsa-labs/main.cpp
 iostream
 -
 BinaryTree.h
 /home/talha/repos/dsa-labs/BinaryTree.h
-BinaryTreeNodeLinker.h
-/home/talha/repos/dsa-labs/BinaryTreeNodeLinker.h
 BinaryTreeLinker.h
 /home/talha/repos/dsa-labs/BinaryTreeLinker.h
 

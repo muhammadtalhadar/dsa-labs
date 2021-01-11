@@ -1,6 +1,7 @@
 //
 #pragma once
-
+#include "Stack.h"
+#include "StackLinker.h"
 #include "BinaryTreeNode.h"
 #include "BinaryTreeNodeLinker.h"
 
@@ -72,4 +73,6 @@ public:
     T ksmallest(int)const;
 
     T klargest(int)const;
+
+    void validateBSTRange(T,T);
 };

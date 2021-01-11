@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named dsa_assignments
+# Target rules for targets named dsa_labs
 
 # Build rule for target.
-dsa_assignments: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dsa_assignments
-.PHONY : dsa_assignments
+dsa_labs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dsa_labs
+.PHONY : dsa_labs
 
 # fast build rule for target.
-dsa_assignments/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/build
-.PHONY : dsa_assignments/fast
+dsa_labs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/build
+.PHONY : dsa_labs/fast
 
 BinaryTree.o: BinaryTree.cpp.o
 
@@ -149,7 +149,7 @@ BinaryTree.o: BinaryTree.cpp.o
 
 # target to build an object file
 BinaryTree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/BinaryTree.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/BinaryTree.cpp.o
 .PHONY : BinaryTree.cpp.o
 
 BinaryTree.i: BinaryTree.cpp.i
@@ -158,7 +158,7 @@ BinaryTree.i: BinaryTree.cpp.i
 
 # target to preprocess a source file
 BinaryTree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/BinaryTree.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/BinaryTree.cpp.i
 .PHONY : BinaryTree.cpp.i
 
 BinaryTree.s: BinaryTree.cpp.s
@@ -167,35 +167,8 @@ BinaryTree.s: BinaryTree.cpp.s
 
 # target to generate assembly for a file
 BinaryTree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/BinaryTree.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/BinaryTree.cpp.s
 .PHONY : BinaryTree.cpp.s
-
-BinaryTreeNode.o: BinaryTreeNode.cpp.o
-
-.PHONY : BinaryTreeNode.o
-
-# target to build an object file
-BinaryTreeNode.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/BinaryTreeNode.cpp.o
-.PHONY : BinaryTreeNode.cpp.o
-
-BinaryTreeNode.i: BinaryTreeNode.cpp.i
-
-.PHONY : BinaryTreeNode.i
-
-# target to preprocess a source file
-BinaryTreeNode.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/BinaryTreeNode.cpp.i
-.PHONY : BinaryTreeNode.cpp.i
-
-BinaryTreeNode.s: BinaryTreeNode.cpp.s
-
-.PHONY : BinaryTreeNode.s
-
-# target to generate assembly for a file
-BinaryTreeNode.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/BinaryTreeNode.cpp.s
-.PHONY : BinaryTreeNode.cpp.s
 
 main.o: main.cpp.o
 
@@ -203,7 +176,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -212,7 +185,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -221,7 +194,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_assignments.dir/build.make CMakeFiles/dsa_assignments.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -232,13 +205,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... dsa_assignments"
+	@echo "... dsa_labs"
 	@echo "... BinaryTree.o"
 	@echo "... BinaryTree.i"
 	@echo "... BinaryTree.s"
-	@echo "... BinaryTreeNode.o"
-	@echo "... BinaryTreeNode.i"
-	@echo "... BinaryTreeNode.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
