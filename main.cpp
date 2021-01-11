@@ -1,49 +1,91 @@
 //
 #include <iostream>
 #include "BinaryTree.h"
-#include "BinaryTreeNodeLinker.h"
 #include "BinaryTreeLinker.h"
 
 using namespace std;
 
+template<class T>
+T getInput(){
+    T n;
+    cout<<"Enter number: ";
+    cin>>n;
+    cout<<endl;
+    return n;
+}
+
+void printMenu(){
+    cout<<"1. Insert."<<endl;
+    cout<<"2. Delete."<<endl;
+    cout<<"3. Preorder Traversal."<<endl;
+    cout<<"4. Inorder Traversal."<<endl;
+    cout<<"5. Postorder Traversal."<<endl;
+    cout<<"6. Display."<<endl;
+    cout<<"7. Mirror."<<endl;
+    cout<<"8. Quit."<<endl;
+    cout<<"9. Assignment 3 Task 2 - Node with Minimum Value."<<endl;
+    cout<<"10. Assignment 3 Task 3 - Is tree height balanced."<<endl;
+}
+
+template<class T>
+bool bstMenuActions(BinaryTree<T>& bst, int choice){
+    if(choice==0){
+        printMenu();
+    }
+    else if(choice==1){
+        bst.insert(getInput<int>());
+    }
+    else if(choice==2){
+        bst.deletenode(getInput<int>());
+    }
+    else if(choice==3){
+        bst.preorder();
+        cout<<endl;
+    }
+    else if(choice==4){
+        bst.inorder();
+        cout<<endl;
+    }
+    else if(choice==5){
+        bst.postorder();
+        cout<<endl;
+    }
+    else if(choice==6){
+        bst.inorder();
+        cout<<endl;
+    }
+    else if(choice==7){
+        bst.mirror();
+    }
+    else if(choice==8){
+        return false;
+    }
+    else if(choice==9){
+        cout<<"Minimum Value: "<<bst.min()<<endl;
+    }
+    else if(choice==10){
+        if(bst.balanced()){
+            cout<<"Balanced."<<endl;
+        }
+        else{
+            cout<<"Unbalanced."<<endl;
+        }
+    }
+    return true;
+}
+
 int main() {
 
-    cout << "\nTest file run." << endl;
-    BinaryTree<int> bt;
-    int nums[] = {60, 70, 80, 75, 77, 50, 53, 57, 30, 35, 40, 48, 45, 32, -1};
-    int i = 0;
+    cout<<endl<<"Creating the BST given in Assignment 3 Question File."<<endl;
 
-    while (nums[i] != -1) {
-        bt.insert(nums[i]);
-        i++;
+    BinaryTree<int> bst;
+
+    const int size=14;
+    int nums[size] = {60, 70, 80, 75, 77, 50, 53, 57, 30, 35, 40, 48, 45, 32};
+
+    for(int num : nums){
+        bst.insert(num);
     }
-
-    cout << "Printing preorder: ";
-    bt.print_preorder();
-    cout << endl;
-
-    cout << "Printing inorder: ";
-    bt.print_inorder();
-    cout << endl;
-
-    cout << "Printing postorder: ";
-    bt.print_postorder();
-    cout << endl;
-
-    cout << "\nSearching... 1 is true, 0 is false." << endl;
-    cout << "search(75): " << bt.search(75) << endl;
-    cout << "search(40): " << bt.search(40) << endl;
-    cout << "search(1001): " << bt.search(1001) << endl;
-
-    cout<<endl;
-
-    cout << "Height: " << bt.height() << endl;
-
-    cout << "Leaf Nodes: " << bt.leafNodeTotalCount() << endl;
-
-    bt.mirror();
-    cout<<"Print mirror inorder: ";
-    bt.print_inorder();
 
     return 0;
 }

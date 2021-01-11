@@ -2,9 +2,13 @@
 #pragma once
 
 #include "BinaryTreeNode.h"
+#include "BinaryTreeNodeLinker.h"
 
 template<class T>
-int largest(const int a, const int b);
+        int largest(const int a, const int b);
+
+template<class T>
+        bool isleaf(const BinaryTreeNode<T>* node);
 
 
 template<class T>
@@ -13,38 +17,59 @@ protected:
     BinaryTreeNode<T> *root;
 private:
 
-    int binaryTreeHeight(BinaryTreeNode<T> *node)const;
+    // methods postfixed with _inner must have public access wrapper methods
+    // and are not to be called directly
 
-    void inorder(BinaryTreeNode<T> *ptr);
+    int height_inner(BinaryTreeNode<T> *node)const;
 
-    void preorder(BinaryTreeNode<T> *ptr);
+    void inorder_inner(BinaryTreeNode<T> *ptr);
 
-    void postorder(BinaryTreeNode<T> *ptr);
+    void preorder_inner(BinaryTreeNode<T> *ptr);
 
-    void insertData(BinaryTreeNode<T> *&node, T data);
+    void postorder_inner(BinaryTreeNode<T> *ptr);
 
-    bool searchData(BinaryTreeNode<T>* node,T data)const;
+    void insert_inner(BinaryTreeNode<T> *&node, T data);
 
-    int leafNodeCount(BinaryTreeNode<T>* node)const;
+    bool search_inner(BinaryTreeNode<T>* node, T data)const;
 
-    void makeMirror(BinaryTreeNode<T>*&);
+    int leaves_inner(BinaryTreeNode<T>* node)const;
+
+    void mirror_inner(BinaryTreeNode<T>*& node);
+
+    bool delete_inner(BinaryTreeNode<T>*& node, T data);
+
+    //returns mem handle to node with min value;
+    BinaryTreeNode<T>* min_inner(BinaryTreeNode<T>* node)const;
+
+    bool balanced_inner(BinaryTreeNode<T>* node)const;
 public:
 
     explicit BinaryTree(BinaryTreeNode<T> *root = nullptr);
 
     void insert(T data);
 
-    void print_inorder();
+    void inorder();
 
-    void print_preorder();
+    void preorder();
 
-    void print_postorder();
+    void postorder();
 
     bool search(T data)const;
 
     int height()const;
 
-      int leafNodeTotalCount()const;
+    int leaves()const;
 
-      void mirror();
+    void mirror();
+
+    bool deletenode(T data);
+
+    //returns a pointer to a copy of of the node with the smallest value,but child pointers are null.
+    T min()const;
+
+    bool balanced()const;
+
+    T ksmallest(int)const;
+
+    T klargest(int)const;
 };
