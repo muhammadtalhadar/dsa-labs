@@ -105,14 +105,14 @@ int BinaryTree<T>::binaryTreeHeight(BinaryTreeNode<T> *node) const{
     if (node == nullptr) {
         return 0;
     } else {
-        return 1 + largest<T>(binaryTreeHeight(node->lnode), binaryTreeHeight(node->rnode));
+        return 1+largest<T>(binaryTreeHeight(node->lnode), binaryTreeHeight(node->rnode));
     }
 }
 
 //wrapper method
 template<class T>
 int BinaryTree<T>::height() const {
-    return binaryTreeHeight(this->root);
+    return binaryTreeHeight(this->root)-1;
 }
 
 
@@ -136,6 +136,28 @@ int BinaryTree<T>::leafNodeCount(BinaryTreeNode<T> *node) const {
 template<class T>
 int BinaryTree<T>::leafNodeTotalCount() const {
     return leafNodeCount(this->root);
+}
+
+template<class T>
+void BinaryTree<T>::mirror() {
+    makeMirror(this->root);
+}
+
+template<class T>
+void BinaryTree<T>::makeMirror(BinaryTreeNode<T> *& node) {
+    if(node){
+        BinaryTreeNode<T>* temp;
+
+        makeMirror(node->lnode);
+        makeMirror(node->rnode);
+
+        temp=node->lnode;
+        node->lnode=node->rnode;
+        node->rnode=temp;
+    }
+    else{
+        return;
+    }
 }
 
 // returns the larger of two integers

@@ -1,4 +1,4 @@
-// TODO: implement compiler linker .h files for template data structs.
+//
 #include <iostream>
 #include "BinaryTree.h"
 #include "BinaryTreeNodeLinker.h"
@@ -40,5 +40,10 @@ int main() {
     cout << "Height: " << bt.height() << endl;
 
     cout << "Leaf Nodes: " << bt.leafNodeTotalCount() << endl;
+
+    bt.mirror();
+    cout<<"Print mirror inorder: ";
+    bt.print_inorder();
+
     return 0;
 }

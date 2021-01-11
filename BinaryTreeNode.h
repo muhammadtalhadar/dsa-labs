@@ -1,5 +1,4 @@
-// TODO: separate BinaryTreeNode declaration and implementation into .cpp and .h files
-
+//
 #pragma once
 template<class T>
 struct BinaryTreeNode{
