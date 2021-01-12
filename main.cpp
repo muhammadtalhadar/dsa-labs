@@ -82,12 +82,12 @@ int main() {
 
     BinaryTree<int> bst;
 
-    const int size=14;
-    int nums[size] = {60, 70, 80, 75, 77, 50, 53, 57, 30, 35, 40, 48, 45, 32};
-
-    for(int num : nums){
-        bst.insert(num);
-    }
+//    const int size=14;
+//    int nums[size] = {60, 70, 80, 75, 77, 50, 53, 57, 30, 35, 40, 48, 45, 32};
+//
+//    for(int num : nums){
+//        bst.insert(num);
+//    }
 
     //the test run
     printMenu();

@@ -243,10 +243,9 @@ bool BinaryTree<T>::balanced_inner(BinaryTreeNode<T>* node)const {
     if(node==nullptr) return 1;
 
     int subtreeHeightDifference=(height_inner(node->rnode) - height_inner(node->lnode));
-    //int subtreeHeightDifferenceAbsolute= subtreeHeightDifference % (subtreeHeightDifference * 2);
     int subtreeHeightDifferenceAbsolute=abs(subtreeHeightDifference);
 
-    if(subtreeHeightDifferenceAbsolute <=1) return true;
+    if(subtreeHeightDifferenceAbsolute <=1 && balanced_inner(node->lnode) && balanced_inner(node->rnode)) return true;
 
     return false;
 }
