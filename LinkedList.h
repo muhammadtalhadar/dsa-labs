@@ -1,30 +1,24 @@
-//
-// Created by talha on 5/2/21.
-//
-
 #pragma once
+#include "Node.h"
+#include "Node.cpp"
 #include <iostream>
-#include "LLNode.h"
-#include "LLNode_linker.h"
 using namespace std;
-template<class T>
-class LinkedList {
-private:
-    LLNode<T>* head;
-    LLNode<T>* tail;
 
-    // recursive implementations
+struct LinkedList {
+  Node *head;
+  Node *tail;
 
-    void _insert(LLNode<T>*& node, T key);
-    void _delete(LLNode<T>*& node, T key);
-    void _print(LLNode<T>* node)const;
-    void _reversePrint(LLNode<T>* node)const;
 public:
-    LinkedList();
-    ~LinkedList();
+  // constructor
+  LinkedList();
+  // destructor
+  ~LinkedList();
 
-    void insertKey(T key);
-    void deleteKey(T key);
-    void print()const;
-    void reversePrint()const;
+  void destroyLL();
+
+  // pure virtual methods
+  virtual void insertAtTail(int) = 0;
+  virtual void insertAtHead(int) = 0;
+  virtual bool removeFromHead() = 0;
+  virtual bool removeFromTail() = 0;
 };

@@ -1,3 +1,0 @@
-/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles/dsa_labs.dir
