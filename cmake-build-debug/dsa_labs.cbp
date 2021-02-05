@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/talha/repos/dsa-labs/CircularQueue.cpp">
+			<Option target="dsa_labs"/>
+		</Unit>
+		<Unit filename="/home/talha/repos/dsa-labs/CircularQueue.h">
+			<Option target="dsa_labs"/>
+		</Unit>
 		<Unit filename="/home/talha/repos/dsa-labs/LLNode.cpp">
 			<Option target="dsa_labs"/>
 		</Unit>

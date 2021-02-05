@@ -6,39 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/talha/repos/dsa-labs/LLNode.cpp
-LLNode.h
-/home/talha/repos/dsa-labs/LLNode.h
-
-/home/talha/repos/dsa-labs/LLNode.h
-iostream
--
-
-/home/talha/repos/dsa-labs/LLNode_linker.h
-LLNode.cpp
-/home/talha/repos/dsa-labs/LLNode.cpp
-
-/home/talha/repos/dsa-labs/LinkedList.cpp
-LinkedList.h
-/home/talha/repos/dsa-labs/LinkedList.h
-
-/home/talha/repos/dsa-labs/LinkedList.h
-iostream
--
-LLNode.h
-/home/talha/repos/dsa-labs/LLNode.h
-LLNode_linker.h
-/home/talha/repos/dsa-labs/LLNode_linker.h
-
-/home/talha/repos/dsa-labs/LinkedList_linker.h
-LinkedList.cpp
-/home/talha/repos/dsa-labs/LinkedList.cpp
-
 /home/talha/repos/dsa-labs/main.cpp
 iostream
 -
-LinkedList.h
-/home/talha/repos/dsa-labs/LinkedList.h
-LinkedList_linker.h
-/home/talha/repos/dsa-labs/LinkedList_linker.h
 

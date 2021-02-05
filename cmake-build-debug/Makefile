@@ -143,6 +143,33 @@ dsa_labs/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/build
 .PHONY : dsa_labs/fast
 
+CircularQueue.o: CircularQueue.cpp.o
+
+.PHONY : CircularQueue.o
+
+# target to build an object file
+CircularQueue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/CircularQueue.cpp.o
+.PHONY : CircularQueue.cpp.o
+
+CircularQueue.i: CircularQueue.cpp.i
+
+.PHONY : CircularQueue.i
+
+# target to preprocess a source file
+CircularQueue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/CircularQueue.cpp.i
+.PHONY : CircularQueue.cpp.i
+
+CircularQueue.s: CircularQueue.cpp.s
+
+.PHONY : CircularQueue.s
+
+# target to generate assembly for a file
+CircularQueue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa_labs.dir/build.make CMakeFiles/dsa_labs.dir/CircularQueue.cpp.s
+.PHONY : CircularQueue.cpp.s
+
 LLNode.o: LLNode.cpp.o
 
 .PHONY : LLNode.o
@@ -233,6 +260,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... dsa_labs"
+	@echo "... CircularQueue.o"
+	@echo "... CircularQueue.i"
+	@echo "... CircularQueue.s"
 	@echo "... LLNode.o"
 	@echo "... LLNode.i"
 	@echo "... LLNode.s"

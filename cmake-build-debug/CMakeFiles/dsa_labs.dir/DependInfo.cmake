@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/talha/repos/dsa-labs/CircularQueue.cpp" "/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles/dsa_labs.dir/CircularQueue.cpp.o"
   "/home/talha/repos/dsa-labs/LLNode.cpp" "/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles/dsa_labs.dir/LLNode.cpp.o"
   "/home/talha/repos/dsa-labs/LinkedList.cpp" "/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles/dsa_labs.dir/LinkedList.cpp.o"
   "/home/talha/repos/dsa-labs/main.cpp" "/home/talha/repos/dsa-labs/cmake-build-debug/CMakeFiles/dsa_labs.dir/main.cpp.o"
