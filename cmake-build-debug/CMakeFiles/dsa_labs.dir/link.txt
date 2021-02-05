@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/dsa_labs.dir/main.cpp.o CMakeFiles/dsa_labs.dir/LLNode.cpp.o CMakeFiles/dsa_labs.dir/LinkedList.cpp.o  -o dsa_labs 

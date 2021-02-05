@@ -1,0 +1,12 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/dsa_labs.dir/LLNode.cpp.o"
+  "CMakeFiles/dsa_labs.dir/LinkedList.cpp.o"
+  "CMakeFiles/dsa_labs.dir/main.cpp.o"
+  "dsa_labs"
+  "dsa_labs.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/dsa_labs.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
